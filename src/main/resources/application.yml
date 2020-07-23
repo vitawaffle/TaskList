@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost/TaskList
+    username: postgres
+    password: postgres
+  jpa:
+    generate-ddl: true
+  thymeleaf:
+    cache: false
