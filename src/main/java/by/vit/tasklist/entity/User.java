@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author Vitaly Lobatsevich
  * @version 1.0
- * @since 2020-07-23
+ * @since 2020-07-28
  */
 @Entity
 @Table(name = "users")

@@ -2,6 +2,8 @@ package by.vit.tasklist.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -10,10 +12,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
  *
  * @author Vitaly Lobatsevich
  * @version 1.0
- * @since 2020-07-27
+ * @since 2020-07-28
  */
 @Configuration
-public class WebSecurityConfig {
+@EnableWebSecurity
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     /**
      * This bean sets default password encoder as BCryptPasswordEncoder.
      *

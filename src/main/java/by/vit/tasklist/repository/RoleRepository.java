@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
  *
  * @author Vitaly Lobatsevich
  * @version 1.0
- * @since 2020-07-23
+ * @since 2020-07-28
  */
 @Repository
 public interface RoleRepository extends JpaRepository<Role, Long> {

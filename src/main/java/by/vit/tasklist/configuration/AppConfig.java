@@ -15,7 +15,7 @@ import java.util.List;
  *
  * @author Vitaly Lobatsevich
  * @version 1.0
- * @since 2020-07-27
+ * @since 2020-07-28
  */
 @Configuration
 @RequiredArgsConstructor
