@@ -11,34 +11,34 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Application base configuration.
+ * Application configuration class.
  *
  * @author Vitaly Lobatsevich
  * @version 1.0
- * @since 2020-07-23
+ * @since 2020-07-27
  */
 @Configuration
 @RequiredArgsConstructor
 public class AppConfig {
-    /**
-     * Base role names.
-     */
-    private final List<String> baseRoleNames = Arrays.asList(
-            "ADMIN",
-            "USER"
-    );
-
     /**
      * Role repository.
      */
     private final RoleRepository roleRepository;
 
     /**
-     * This method creates base roles.
+     * Basic role names.
+     */
+    private final List<String> basicRoleNames = Arrays.asList(
+            "ADMIN",
+            "USER"
+    );
+
+    /**
+     * This bean initialize basic roles.
      */
     @Bean
-    public void initRoles() {
-        for (var roleName : baseRoleNames) {
+    public void initBasicRoles() {
+        for (var roleName : basicRoleNames) {
             if (roleRepository.findByName(roleName) == null) {
                 val role = new Role();
                 role.setName(roleName);

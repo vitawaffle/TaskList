@@ -17,7 +17,7 @@ class TaskListApplicationTests {
     }
 
     @Test
-    public void shouldExistsRoleAdmin() {
+    public void shouldExistRoleAdmin() {
         assertNotNull(roleRepository.findByName("ADMIN"));
     }
 
