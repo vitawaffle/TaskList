@@ -18,22 +18,16 @@ import java.util.List;
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class User extends SQLEntity {
-    /**
-     * Username.
-     */
+    /** Username. */
     @Column(nullable = false, unique = true)
     private String username;
 
-    /**
-     * Password.
-     */
+    /** Password. */
     @Column(nullable = false)
     private String password;
 
-    /**
-     * Roles.
-     */
-    @ManyToMany
+    /** Roles. */
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "users_roles",
             joinColumns = @JoinColumn(name = "user_id"),
@@ -41,9 +35,7 @@ public class User extends SQLEntity {
     )
     private List<Role> roles;
 
-    /**
-     * Is the user enable.
-     */
+    /** Is the user enable. */
     @Column(nullable = false)
     private Boolean enable;
 

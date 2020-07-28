@@ -19,9 +19,7 @@ import javax.persistence.Table;
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class Role extends SQLEntity {
-    /**
-     * Role name.
-     */
+    /** Role name. */
     @Column(nullable = false, unique = true)
     private String name;
 

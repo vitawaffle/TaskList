@@ -20,22 +20,16 @@ import java.util.List;
 @Configuration
 @RequiredArgsConstructor
 public class AppConfig {
-    /**
-     * Role repository.
-     */
+    /** Role repository. */
     private final RoleRepository roleRepository;
 
-    /**
-     * Basic role names.
-     */
+    /** Basic role names. */
     private final List<String> basicRoleNames = Arrays.asList(
             "ADMIN",
             "USER"
     );
 
-    /**
-     * This bean initialize basic roles.
-     */
+    /** This bean initialize basic roles. */
     @Bean
     public void initBasicRoles() {
         for (var roleName : basicRoleNames) {

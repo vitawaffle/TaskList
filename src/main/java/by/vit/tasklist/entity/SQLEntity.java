@@ -17,9 +17,7 @@ import javax.persistence.MappedSuperclass;
 @MappedSuperclass
 @Data
 public class SQLEntity {
-    /**
-     * Entity id from database.
-     */
+    /** Entity id from database. */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Long id;
